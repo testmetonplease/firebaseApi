@@ -1,0 +1,38 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h1 class="main-heading">TOP 30 new stories</h1>
+    </div>
+  </div>
+  <div class="row align-items-end">
+
+    <div *ngFor="let item of (storyDataSource$ | async)" class="col-md-6 col-lg-4" > 
+      <mat-card class="z-depth zoom" >
+        <mat-card-title></mat-card-title> 
+        
+        <mat-card-subtitle>
+            {{ item?.title }}
+        </mat-card-subtitle>
+         
+      </mat-card>
+    </div>
+  </div>
+  <div class="row">
+      <div class="col-md-12">
+        <h1 class="main-heading">TOP 10 commentators</h1>
+      </div>
+    </div>
+    <div class="row align-items-end">
+  
+      <div *ngFor="let item of (userDataSource$ | async)" class="col-md-6 col-lg-4" > 
+        <mat-card class="z-depth zoom" >
+          <mat-card-title></mat-card-title> 
+          
+          <mat-card-subtitle>
+              {{ item?.id}}
+          </mat-card-subtitle>
+           
+        </mat-card>
+      </div>
+    </div>
+</div>
